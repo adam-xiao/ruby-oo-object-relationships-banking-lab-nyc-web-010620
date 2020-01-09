@@ -16,6 +16,7 @@ class Transfer
   end
 
   def execute_transaction
+    #from miles and ty
     if !self.valid? || @status == "complete" || @sender.balance < @amount
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
